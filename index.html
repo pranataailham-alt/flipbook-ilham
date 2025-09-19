@@ -13,12 +13,14 @@
     body {
       background: #222;
       font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
     }
 
     #flipbook {
       width: 800px;
       height: 600px;
-      margin: 50px auto;
+      margin: 20px auto;
     }
 
     #flipbook div {
@@ -32,16 +34,41 @@
       height: 100%;
       object-fit: cover;
     }
+
+    .nav-buttons {
+      margin-top: 20px;
+    }
+
+    .nav-buttons button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #00aaff;
+      color: white;
+    }
+
+    .nav-buttons button:hover {
+      background: #0077aa;
+    }
   </style>
 </head>
 <body>
 
-  <h2 style="text-align:center; color:white;">📖 Album Foto Flipbook</h2>
+  <h2>📖 Album Foto Flipbook</h2>
 
-  <!-- Semua halaman HARUS ada di dalam #flipbook -->
+  <!-- Flipbook -->
   <div id="flipbook">
     <div><img src="foto1.jpeg" alt="Halaman 1"></div>
     <div><img src="foto2.jpg" alt="Halaman 2"></div>
+  </div>
+
+  <!-- Tombol Navigasi -->
+  <div class="nav-buttons">
+    <button onclick="$('#flipbook').turn('previous')">⬅ Prev</button>
+    <button onclick="$('#flipbook').turn('next')">Next ➡</button>
   </div>
 
   <script>
