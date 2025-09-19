@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flipbook Demo</title>
+  <title>Album Foto Flipbook</title>
 
   <!-- jQuery + Turn.js dari CDN -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -11,7 +11,7 @@
 
   <style>
     body {
-      background: #f0f0f0;
+      background: #222;
       font-family: Arial, sans-serif;
     }
 
@@ -22,23 +22,29 @@
     }
 
     #flipbook div {
-      background: #fff;
-      border: 1px solid #ccc;
-      font-size: 24px;
-      text-align: center;
-      line-height: 600px;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #flipbook img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* gambar akan menutupi seluruh halaman */
     }
   </style>
 </head>
 <body>
 
-  <h2 style="text-align:center;">📖 Demo Flipbook (Turn.js)</h2>
+  <h2 style="text-align:center; color:white;">📖 Album Foto Flipbook</h2>
 
   <div id="flipbook">
-    <div>Halaman 1</div>
-    <div>Halaman 2</div>
-    <div>Halaman 3</div>
-    <div>Halaman 4</div>
+    <div><img src="https://via.placeholder.com/800x600/ff9999/000000?text=Cover+Album" /></div>
+    <div><img src="https://via.placeholder.com/800x600/99ff99/000000?text=Halaman+1" /></div>
+    <div><img src="https://via.placeholder.com/800x600/9999ff/ffffff?text=Halaman+2" /></div>
+    <div><img src="https://via.placeholder.com/800x600/ffff99/000000?text=Halaman+3" /></div>
+    <div><img src="https://via.placeholder.com/800x600/ffcc99/000000?text=Halaman+4" /></div>
+    <div><img src="https://via.placeholder.com/800x600/cccccc/000000?text=Back+Cover" /></div>
   </div>
 
   <script>
