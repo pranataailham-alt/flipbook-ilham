@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipbook Demo</title>
+
+  <!-- jQuery + Turn.js dari CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/blasten/turn.js/turn.min.js"></script>
+
+  <style>
+    body {
+      background: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    #flipbook {
+      width: 800px;
+      height: 600px;
+      margin: 50px auto;
+    }
+
+    #flipbook div {
+      background: #fff;
+      border: 1px solid #ccc;
+      font-size: 24px;
+      text-align: center;
+      line-height: 600px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center;">📖 Demo Flipbook (Turn.js)</h2>
+
+  <div id="flipbook">
+    <div>Halaman 1</div>
+    <div>Halaman 2</div>
+    <div>Halaman 3</div>
+    <div>Halaman 4</div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      $("#flipbook").turn({
+        width: 800,
+        height: 600,
+        autoCenter: true
+      });
+    });
+  </script>
+
+</body>
+</html>
